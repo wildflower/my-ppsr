@@ -1,0 +1,22 @@
+ {{entity.CompanyNumber}}
+<br/>
+ {{entity.CompanyName}}
+ <br/>
+ {{entity.Incorporationdate}}
+ <br/>
+ {{entity.status}}
+  <br/>
+ {{entity.removalCommenced}}
+  <br/>
+ {{entity.annualReturnFilingMonth}}
+  <br/>
+ {{entity.director}}
+ 
+ <ul>
+    {% for user in entity.directors %}
+        <li>{{ user.firstNames }} {{ user.surname }}</li>
+    {% endfor %}
+    
+</ul>
+   <br/>
+ {{entity.Office}}
