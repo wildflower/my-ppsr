@@ -49,30 +49,7 @@ class FinancialStatementSearch{
 }
 
 
-class CompanySummaryResult
-{
-	public $companyNumber ;
-	public $companyName;
-	public $incorporationDate;
-	public $status;
-	public $annualReturnFilingMonth;
-	public $removalCommenced;
-	public $directors;
-	public $registeredOffice;
-	
-	function __construct($searchResult){
-	
-	$this->companyNmber = $searchResult->companyNumber;
-	$this->companyName = $searchResult->companyName;
-	$this->incorporationDate = $searchResult->incorporationDate;
-	$this->status = $searchResult->status->description;
-	$this->annualReturnFilingMonth = $searchResult->annualReturnFilingMonth;
-	$this->registeredOffice = $searchResult->registeredOffice;
-	
-	}
-
-}
-
+function soapSummaryTest() {
 	$myclient = new SoapSummaryApi();
 	//var_dump($myclient->__getFunctions());
 	
@@ -80,22 +57,22 @@ class CompanySummaryResult
 	$searchDetails->companyNumber = '200';
 	$searchDetails->clientBillingReference =  'test';
 
-	var_dump($myclient->retrieveCompanySummaryDetails('200'));
+	var_dump($myclient->retrieveCompanySummaryDetails('1830488S'));
 
 	$searchResult = $myclient->retrieveCompanySummaryDetails('200');
-echo "after  serch Result \n";
+echo "after soapSummaryTest serch Result \n";
 	
 	//$xml  = simplexml_load_string($searchResult);
 	//var_dump($xml);
-$resultSet = new CompanySummaryResult($searchResult);
+//$resultSet = new CompanySummaryResult($searchResult);
 
-echo $resultSet->status ,"\n";
-echo $resultSet->registeredOffice->address2;
+echo $searchResult ->status ,"\n";
+echo $searchResult ->registeredOffice->address2;
+
+}
 
 
-
-
-
+//soapSummaryTest() ;
 
 
 
