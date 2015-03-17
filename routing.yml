@@ -1,0 +1,31 @@
+acme_demo_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: AcmeDemoBundle:Default:index }
+
+acme_demo_home:
+    path:     /
+    defaults: { _controller: AcmeDemoBundle:Default:home }
+    
+acme_demo_form:
+    path:     /form
+    defaults: { _controller: AcmeDemoBundle:Default:new }    
+    
+task_success:
+    path:     /success
+    defaults: { _controller: AcmeDemoBundle:Default:success }        
+
+company_search:
+    path:     /company/{nzbn}
+    defaults: { _controller: AcmeDemoBundle:Company:index }     
+
+company_soap_search:
+    path:     /company/soap/{nzbn}
+    defaults: { _controller: AcmeDemoBundle:Company:soap }     
+
+ppsr_index:
+    path:     /ppsr
+    defaults: { _controller: AcmeDemoBundle:PPSR:index }         
+
+ppsr_reference:
+    path:     /ppsr/reference
+    defaults: { _controller: AcmeDemoBundle:PPSR:reference }   
