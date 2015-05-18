@@ -19,61 +19,61 @@ class Address
      */
        protected $id;
 
-    /**
-     * @var string
+        /**
+     * @ORM\Column(type="string", nullable=true)
      */
     private $paf_id;
 
-    /**
-     * @var string
+      /**
+     * @ORM\Column(type="string", nullable=true)
      */
     private $care_of;
     
         /**
-     * @var string
+     * @ORM\Column(type="string", nullable=true)
      */
     private $streetnumber;
 
-    /**
-     * @var string
+        /**
+     * @ORM\Column(type="string", nullable=true)
      */
     private $streetname;
     
     
-    /**
-     * @var string
+       /**
+     * @ORM\Column(type="string", nullable=true)
      */
     private $streettype;
     
-    /**
-     * @var string
+         /**
+     * @ORM\Column(type="string", nullable=true)
      */
     private $suburb;
     
     
-    /**
-     * @var string
+        /**
+     * @ORM\Column(type="string", nullable=true)
      */
     private $city;
     
-    /**
-     * @var string
+          /**
+     * @ORM\Column(type="string", nullable=true)
      */
     private $region;    
     
-    /**
-     * @var string
+         /**
+     * @ORM\Column(type="string", nullable=true)
      */
     private $postcode;
     
     
-	/**
-     * @var string
+      /**
+     * @ORM\Column(type="string", nullable=true)
      */
     private $country;
     
-    /**
-     * @var string
+       /**
+     * @ORM\Column(type="string", nullable=true)
      */
     private $addresstype;
     
@@ -389,5 +389,258 @@ class Address
     public function getId()
     {
         return $this->id;
+    }
+
+    /**
+     * Set paf_id
+     *
+     * @param string $pafId
+     * @return Address
+     */
+    public function setPafId($pafId)
+    {
+        $this->paf_id = $pafId;
+
+        return $this;
+    }
+
+    /**
+     * Get paf_id
+     *
+     * @return string 
+     */
+    public function getPafId()
+    {
+        return $this->paf_id;
+    }
+
+    /**
+     * Set care_of
+     *
+     * @param string $careOf
+     * @return Address
+     */
+    public function setCareOf($careOf)
+    {
+        $this->care_of = $careOf;
+
+        return $this;
+    }
+
+    /**
+     * Get care_of
+     *
+     * @return string 
+     */
+    public function getCareOf()
+    {
+        return $this->care_of;
+    }
+
+    /**
+     * Set streetnumber
+     *
+     * @param string $streetnumber
+     * @return Address
+     */
+    public function setStreetnumber($streetnumber)
+    {
+        $this->streetnumber = $streetnumber;
+
+        return $this;
+    }
+
+    /**
+     * Get streetnumber
+     *
+     * @return string 
+     */
+    public function getStreetnumber()
+    {
+        return $this->streetnumber;
+    }
+
+    /**
+     * Set streetname
+     *
+     * @param string $streetname
+     * @return Address
+     */
+    public function setStreetname($streetname)
+    {
+        $this->streetname = $streetname;
+
+        return $this;
+    }
+
+    /**
+     * Get streetname
+     *
+     * @return string 
+     */
+    public function getStreetname()
+    {
+        return $this->streetname;
+    }
+
+    /**
+     * Set streettype
+     *
+     * @param string $streettype
+     * @return Address
+     */
+    public function setStreettype($streettype)
+    {
+        $this->streettype = $streettype;
+
+        return $this;
+    }
+
+    /**
+     * Get streettype
+     *
+     * @return string 
+     */
+    public function getStreettype()
+    {
+        return $this->streettype;
+    }
+
+    /**
+     * Set suburb
+     *
+     * @param string $suburb
+     * @return Address
+     */
+    public function setSuburb($suburb)
+    {
+        $this->suburb = $suburb;
+
+        return $this;
+    }
+
+    /**
+     * Get suburb
+     *
+     * @return string 
+     */
+    public function getSuburb()
+    {
+        return $this->suburb;
+    }
+
+    /**
+     * Set city
+     *
+     * @param string $city
+     * @return Address
+     */
+    public function setCity($city)
+    {
+        $this->city = $city;
+
+        return $this;
+    }
+
+    /**
+     * Get city
+     *
+     * @return string 
+     */
+    public function getCity()
+    {
+        return $this->city;
+    }
+
+    /**
+     * Set region
+     *
+     * @param string $region
+     * @return Address
+     */
+    public function setRegion($region)
+    {
+        $this->region = $region;
+
+        return $this;
+    }
+
+    /**
+     * Get region
+     *
+     * @return string 
+     */
+    public function getRegion()
+    {
+        return $this->region;
+    }
+
+    /**
+     * Set postcode
+     *
+     * @param string $postcode
+     * @return Address
+     */
+    public function setPostcode($postcode)
+    {
+        $this->postcode = $postcode;
+
+        return $this;
+    }
+
+    /**
+     * Get postcode
+     *
+     * @return string 
+     */
+    public function getPostcode()
+    {
+        return $this->postcode;
+    }
+
+    /**
+     * Set country
+     *
+     * @param string $country
+     * @return Address
+     */
+    public function setCountry($country)
+    {
+        $this->country = $country;
+
+        return $this;
+    }
+
+    /**
+     * Get country
+     *
+     * @return string 
+     */
+    public function getCountry()
+    {
+        return $this->country;
+    }
+
+    /**
+     * Set addresstype
+     *
+     * @param string $addresstype
+     * @return Address
+     */
+    public function setAddresstype($addresstype)
+    {
+        $this->addresstype = $addresstype;
+
+        return $this;
+    }
+
+    /**
+     * Get addresstype
+     *
+     * @return string 
+     */
+    public function getAddresstype()
+    {
+        return $this->addresstype;
     }
 }
