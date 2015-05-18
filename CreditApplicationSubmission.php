@@ -4,6 +4,8 @@ namespace Acme\DemoBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
 
+
+
 /**
  * @ORM\Entity
  * @ORM\Table(name="CreditApplication")
@@ -45,6 +47,8 @@ class CreditApplicationSubmission {
      * @ORM\Column(type="string", nullable=true)
      */
       protected $Terms;
+      static $terms = array( '6' => '6 Months', '6IF' => '6 Months Interest Free', '63D' => '6 Months 3 Months Deferred', '6IF3D' => '6 Months Interest Free 3 Months Deferred', '9' => '9 Months', '9IF' => '9 Months Interest Free', '93D' => '9 Months 3 Months Deferred', '9IF3D' => '9 Months Interest Free 3 Months Deferred', '12' => '12 Months', '12IF' => '12 Months Interest Free', '123D' => '12 Months 3 Months Deferred', '12IF3D' => '12 Months Interest Free 3 Months Deferred', '18' => '18 Months', '18IF' => '18 Months Interest Free', '183D' => '18 Months 3 Months Deferred', '18IF3D' => '18 Months Interest Free 3 Months Deferred', '24' => '24 Months', '24IF' => '24 Months Interest Free', '243D' => '24 Months 3 Months Deferred', '24IF3D' => '24 Months Interest Free 3 Months Deferred', '36' => '36 Months', '36IF' => '36 Months Interest Free', '363D' => '36 Months 3 Months Deferred', '36IF3D' => '36 Months Interest Free 3 Months Deferred' );
+      static $termslength = array( '6' => '6', '6IF' => '6', '63D' => '6', '6IF3D' => '6', '9' => '9', '9IF' => '9', '93D' => '9', '9IF3D' => '9', '12' => '12', '12IF' => '12', '123D' => '12', '12IF3D' => '12', '18' => '18', '18IF' => '18', '183D' => '18', '18IF3D' => '18', '24' => '24', '24IF' => '24', '243D' => '24', '24IF3D' => '24', '36' => '36', '36IF' => '36', '363D' => '36', '36IF3D' => '36' );
 	/**
      * @ORM\Column(type="string", nullable=true)
      */
@@ -74,6 +78,7 @@ class CreditApplicationSubmission {
      */
 
       protected $MarritalStatus;
+      static $marritalstatus = array('married' => 'Married', 'partner' => 'Partner', 'single' => 'Single', 'other' => 'Other' );
           /**
      * @ORM\Column(type="date", nullable=true)
      */      
@@ -107,6 +112,8 @@ class CreditApplicationSubmission {
      */
 
       protected $StreetType;
+      
+    
                 /**
      * @ORM\Column(type="string", nullable=true)
      */
@@ -182,6 +189,8 @@ class CreditApplicationSubmission {
      */
 
       protected $Employment;
+      static $employmenttype = array('fulltime' => 'Full Time', 'parttime' => 'Part Time' , 'beneficiary' => 'Beneficiary');
+      
                 /**
      * @ORM\Column(type="string", nullable=true)
      */
@@ -192,10 +201,12 @@ class CreditApplicationSubmission {
      */
 
       protected $Occupation;
+      static $occupation = array('bluecollar' => 'Blue Collar', 'manager' => 'Manager', 'noinfo' => 'No Info', 'office' => 'Office', 'other' => 'Other', 'proffessional' => 'Professional', 'retired' => 'Retired', 'semi-prof' => 'Semi-Prof', 'unemployed' => 'Unemployed' );
           /**
      * @ORM\Column(type="string", nullable=true)
      */
       protected $TimeAtJob;
+      static $timeatjobtype  = array('1' => '0 - .5 years', '2' => '.5 - 1.5','3' => '1.5 - 2.5', '4' => '2.5 - 5.5', '5' => '5.5 - 12.5', '6' => '12.5 +', 'noinfo' => 'No Info', 'retired' => 'Retired');
           /**
      * @ORM\Column(type="decimal", scale=2, nullable=true)
      */
@@ -205,11 +216,13 @@ class CreditApplicationSubmission {
      */
 
       protected $NetPayFrequency;
+      static $netpayfrequencytype = array('weekly' => 'Weekly','fortnightly' => 'Fortnightly' ,'monthly' => 'Monthly','yearly' => 'Yearly');
                 /**
      * @ORM\Column(type="string", nullable=true)
      */
 
       protected $OwnProperty;
+      static $ownpropertytype = array( 'own' => 'Own', 'rent' => 'Rent', 'board' => 'Board', 'other' => 'Other');
           /**
      * @ORM\Column(type="decimal", scale=2, nullable=true)
      */
